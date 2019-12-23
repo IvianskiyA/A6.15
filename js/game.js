@@ -38,7 +38,7 @@ function endGame() {
 
 function handleClick(event) {
   // D FIXME: убирать текст со старых таргетов. Кажется есть .text?
-  $(".game-field").removeClass('miss');
+  $(".game-field").removeClass("miss");
   if ($(event.target).hasClass("target")) {
     hits = hits + 1;
     round();
