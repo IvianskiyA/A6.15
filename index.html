@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/game.css">
 
-    <title>PWS A6 HW</title>
+    <title>A6.16 10 квадратиков</title>
 
 
   </head>
   <body>
 
-    <div class="container">
+    <div class="container col-6">
+      <br>
       <h1>10 квадратов</h1>
-
       <!-- FIXME: сейчас тут не все слоты, надо добавить нужных -->
       <div class="row">
         <div class="col game-field align-text-bottom" id="slot-11"></div>
@@ -70,8 +70,14 @@
         <!-- TODO: можно добавить красные квадратики с отрицательным весом и делать счёт попаданий в конце как разницу очков за попадание минус штрафные -->
         <h2>Вы нашли 10 зелёных квадратов за <span id="total-time-played"></span> секунд</h2>
       </div>
+      
+      <br>
       <div class="row">
-        <button id="button-reload" class="btn btn-primary">Играть заново</button>
+        <button id="button-start" class="col btn btn-primary">Старт</button>
+        <button id="button-reload" class="col btn btn-primary d-none">Играть заново</button>        
+        <div id="timer-message" class="col d-none">
+          <h2><span id="time-left"></span>  cекунд</h2>
+        </div>
       </div>
     </div>
 
