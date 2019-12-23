@@ -29,6 +29,7 @@ function endGame() {
   let totalPlayedMillis = getTimestamp() - firstHitTime;
   let totalPlayedSeconds = Number(totalPlayedMillis / 1000).toPrecision(4);
   $("#total-time-played").text(totalPlayedSeconds);
+  $("#total-miss").text(missHit);
   $("#win-message").removeClass("d-none");
   $(".game-field").addClass("d-none");
   clearInterval(timerId);
@@ -45,7 +46,7 @@ function handleClick(event) {
   else if ($(".game-field").hasClass("target"))
   { 
     $(event.target).addClass("miss");
-    maxHit = missHit + 1;
+    missHit = missHit + 1;
   }
   // D TODO: как-то отмечать если мы промахнулись? См CSS класс .miss
 }
